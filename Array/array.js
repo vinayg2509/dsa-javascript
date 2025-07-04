@@ -20,9 +20,27 @@ class Array
             return count;
         }
 
+    //*To traverse an array
+    displayElement()
+    {
+       
+        if(this.length()==0)
+        {
+            console.log(`Array is empty`);
+        }
+        else
+        {
+             for(let index=0;index>this.length();i++)
+            {
+                console.log(array[index]);
+            }
+        } 
+       
+    }
 }
 
 let array= new Array()
 console.log(`Length of an array is:${array.length()}`);
+array.displayElement()
 
 
