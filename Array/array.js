@@ -2,7 +2,7 @@ console.log("Linear data structure")
 
 //!-----------------------Array--------------------------
 
-class Array
+class MyArray
 {
     constructor(array)
     {
@@ -30,17 +30,33 @@ class Array
         }
         else
         {
-             for(let index=0;index>this.length();i++)
+             for(let index=0;index<this.length();index++)
             {
                 console.log(array[index]);
             }
         } 
        
     }
+    //*To add first (unshift)
+    customUnshift(array,value)
+    {
+        for(let index=this.length();index>=0;index--)
+            {
+                array[index]=array[index-1]
+            }
+            array[0]=value
+    }
 }
 
-let array= new Array()
+let array= new MyArray()
+
+
+array.customUnshift(array,20)
+array.customUnshift(array,10)
+array.customUnshift(array,30)
+
 console.log(`Length of an array is:${array.length()}`);
 array.displayElement()
+
 
 
